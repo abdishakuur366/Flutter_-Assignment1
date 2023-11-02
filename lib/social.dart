@@ -1,15 +1,25 @@
+import 'package:first_flutter_project/myApp.dart';
+import 'package:first_flutter_project/pizza.dart';
 import 'package:flutter/material.dart';
 
-class social extends StatelessWidget {
+class social extends StatefulWidget {
   const social({super.key});
-//Color.fromARGB(255, 112, 81, 33)
+
+  @override
+  State<social> createState() => _socialState();
+}
+
+class _socialState extends State<social> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 177, 126, 49),
+      backgroundColor: Color.fromARGB(146, 116, 42, 138),
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 112, 81, 33),
-          title: Center(child: Text("Social App"))),
+        backgroundColor: Color.fromARGB(255, 101, 14, 136),
+        title: Center(
+          child: Text("Social App"),
+        ),
+      ),
       body: SafeArea(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -34,11 +44,15 @@ class social extends StatelessWidget {
                         children: [
                           Text(
                             "Abdishakuur Hassan",
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           Container(
                               margin: EdgeInsets.only(right: 50),
-                              child: Text("5 mins ago"))
+                              child: Text(
+                                "5 mins ago",
+                              ))
                         ],
                       ),
                       //Container kaan waxaa kujiro Icon ka geeska yaalo oo kor
@@ -60,7 +74,7 @@ class social extends StatelessWidget {
                   ),
                   //Rowga Sawirka, Magaca, Time ka iyo ICON ka wuu dhamaaday
                   Image(
-                    image: AssetImage('images/poster.png'),
+                    image: AssetImage('images/post.jpg'),
                   ),
                   SizedBox(
                     height: 10,
@@ -80,7 +94,10 @@ class social extends StatelessWidget {
                       ),
                       Text(
                         "Like",
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'PixelifySans',
+                        ),
                       ),
                       SizedBox(
                         width: 40,
@@ -92,7 +109,12 @@ class social extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      Text("Comment"),
+                      Text(
+                        "Comment",
+                        style: TextStyle(
+                          fontFamily: 'PixelifySans',
+                        ),
+                      ),
                       SizedBox(
                         width: 40,
                       ),
@@ -100,9 +122,23 @@ class social extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      Text("Share")
+                      Text(
+                        "Share",
+                        style: TextStyle(
+                          fontFamily: 'PixelifySans',
+                        ),
+                      )
                     ],
-                  )
+                  ),
+                  // ElevatedButton.icon(
+                  //     onPressed: () {
+                  //       setState(() {
+                  //         Navigator.push(context,
+                  //             MaterialPageRoute(builder: (context) => myApp()));
+                  //       });
+                  //     },
+                  //     icon: Icon(Icons.arrow_back),
+                  //     label: Text("Go to Pizza Screen"))
                 ],
               ),
             ),
